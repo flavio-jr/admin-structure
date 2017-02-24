@@ -10,6 +10,7 @@
 
     <title>Gentelella Alela! | </title>
 
+    
     <!-- Bootstrap -->
     <link href="./css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -28,7 +29,8 @@
 
     <!-- Custom Theme Style -->
     <link href="./css/app.css" rel="stylesheet">
-  </head>
+    @yield('stylesheets')
+ </head>
 
   <body class="nav-md">
     <div class="container body">
@@ -58,6 +60,7 @@
           </div>
         </div>
         @include('sidebar')
+
         @include('content')
       </div>
     </div>
@@ -100,6 +103,6 @@
 
     <!-- Custom Theme Scripts -->
     <script src="./js/custom.min.js"></script>
-    
+
   </body>
 </html>

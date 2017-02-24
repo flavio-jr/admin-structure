@@ -64,7 +64,9 @@ elixir(function(mix) {
     mix.copy("resources/assets/gentelella/vendors/moment/min/moment.min.js", "public/js/moment/min/moment.min.js");
     mix.copy("resources/assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js", "public/js/bootstrap-daterangepicker/daterangepicker.js");
 
-
+    // animate
+    mix.copy("resources/assets/gentelella/documentation/css/animate.min.css", "public/css/animate.min.css");
+    
     
 
 
