@@ -27,7 +27,6 @@
 
 <!-- Custom Theme Style -->
     <link href="./css/app.css" rel="stylesheet">
-    @yield('head')
 
-    @end
 </head>
+@yield('menu')
