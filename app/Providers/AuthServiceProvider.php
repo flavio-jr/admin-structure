@@ -25,8 +25,30 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Gate::define('index', function ($user, $num) {
-            return $user->id == $num;
+        Gate::define('index', function ($usuario) {
+            if($usuario->perfis){
+                $usuario->perfis->prf_nome == 'admin';
+                return true;
+            }
+            return false;
+        });
+
+        Gate::define('edit', function ($usuario) {
+
+            if($usuario->perfis){
+                $usuario->perfis->prf_nome == 'admin';
+                return true;
+            }
+            return false;
+        });
+
+        Gate::define('delete', function ($usuario) {
+
+            if($usuario->perfis){
+                $usuario->perfis->prf_nome == 'admin';
+                return true;
+            }
+            return false;
         });
     }
 }

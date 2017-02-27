@@ -7,11 +7,6 @@ use Auth;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
@@ -24,10 +19,10 @@ class HomeController extends Controller
      */
     public function index(){
 
-        if (Auth()->user()->can('index', 1)) {
+        if (Auth()->user()->can('index')) {
             return 'validou';
         }
-        //return 'nao validou';
-        return view('body');
+        return 'nao validou';
+        //return view('body');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Perfis extends Migration
+class CreatePerfis extends Migration
 {
     /**
      * Run the migrations.
@@ -28,6 +28,6 @@ class Perfis extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('perfis');
     }
 }
