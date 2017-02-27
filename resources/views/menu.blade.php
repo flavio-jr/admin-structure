@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('head')
 @section('menu')
 <body class="nav-md">
@@ -60,7 +59,6 @@
                                     <li><a href="inbox.html">Inbox</a></li>
                                     <li><a href="calendar.html">Calendar</a></li>
                                 </ul>
-=======
 <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">

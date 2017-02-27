@@ -29,11 +29,6 @@
 
     <!-- Custom Theme Style -->
     <link href="./css/app.css" rel="stylesheet">
-<<<<<<< HEAD
-
-</head>
-@yield('menu')
-=======
     @yield('stylesheets')
  </head>
 
@@ -111,4 +106,3 @@
 
   </body>
 </html>
->>>>>>> c2273445a5d525bb16ba786dd7da07cc6c9071d8

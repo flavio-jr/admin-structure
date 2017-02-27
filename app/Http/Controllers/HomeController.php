@@ -17,12 +17,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-
+    public function index()
+    {
         if (Auth()->user()->can('index')) {
-            return 'validou';
+            
+            return view('head');
         }
         return 'nao validou';
-        //return view('body');
     }
 }

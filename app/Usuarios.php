@@ -9,10 +9,10 @@ class Usuarios extends Authenticatable
 {
     use Notifiable;
 
-    protected $primaryKey = 'usr_id';
+    protected $primaryKey = 'id';
 
 
-    protected $fillable = ['usr_username','usr_email','usr_ativo','usr_prf_id'];
+    protected $fillable = ['username','email','ativo','prf_id'];
 
     protected $hidden = [
         'password', 'remember_token',
@@ -22,7 +22,7 @@ class Usuarios extends Authenticatable
 
     public function perfis()
     {
-        return $this->hasOne('App\Perfis','prf_id','usr_prf_id');
+        return $this->hasOne('App\Perfis','prf_id','prf_id');
     }
 
 }

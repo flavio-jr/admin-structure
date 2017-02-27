@@ -14,16 +14,16 @@ class CreateUsuarios extends Migration
     public function up()
     {
         Schema::create('usuarios', function (Blueprint $table) {
-            $table->increments('usr_id');
-            $table->string('usr_username',50)->unique();
-            $table->string('usr_email',255);
-            $table->string('usr_password',255);
-            $table->integer('usr_prf_id')->unsigned();
-            $table->integer('usr_ativo');
+            $table->increments('id');
+            $table->string('username',50)->unique();
+            $table->string('email',255);
+            $table->string('password',255);
+            $table->integer('prf_id')->unsigned();
+            $table->integer('ativo');
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('usr_prf_id')->references('prf_id')->on('perfis')->onDelete('cascade');
+            $table->foreign('prf_id')->references('prf_id')->on('perfis')->onDelete('cascade');
         });
     }
 

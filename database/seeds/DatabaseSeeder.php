@@ -21,11 +21,11 @@ class DatabaseSeeder extends Seeder
         $perfil = Perfis::find(1);
 
         $usuario = new Usuarios();
-        $usuario->usr_username = 'admin';
-        $usuario->usr_email = 'admin@admin.com';
-        $usuario->usr_password = bcrypt('123456');
-        $usuario->usr_prf_id = $perfil->prf_id;
-        $usuario->usr_ativo = 1;
+        $usuario->username = 'admin';
+        $usuario->email = 'admin@admin.com';
+        $usuario->password = bcrypt('123456');
+        $usuario->prf_id = $perfil->prf_id;
+        $usuario->ativo = 1;
 
         $usuario->save();
     }
