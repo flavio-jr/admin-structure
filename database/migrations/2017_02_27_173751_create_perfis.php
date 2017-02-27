@@ -15,7 +15,7 @@ class CreatePerfis extends Migration
     {
         Schema::create('perfis', function (Blueprint $table) {
             $table->increments('prf_id');
-            $table->string('prf_nome')->unique();
+            $table->string('prf_nome',50)->unique();
             $table->timestamps();
 
         });

@@ -35,8 +35,8 @@
           <section class="login_content">
           @yield('layoutLogin')
           
-          @section('formLogin')
-            @include('auth.formLogin')
+          @include('auth.formLogin')
+          
 
           </section>
         </div>
