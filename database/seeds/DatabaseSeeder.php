@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Usuarios;
-use App\Perfis;
+use App\User;
+use App\Perfil;
 
 
 class DatabaseSeeder extends Seeder
@@ -14,13 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $perfil = new Perfis();
+        $perfil = new Perfil;
         $perfil->prf_nome = 'admin';
         $perfil->save();
 
-        $perfil = Perfis::find(1);
-
-        $usuario = new Usuarios();
+        $usuario = new User;
         $usuario->username = 'admin';
         $usuario->email = 'admin@admin.com';
         $usuario->password = bcrypt('123456');
@@ -28,5 +26,20 @@ class DatabaseSeeder extends Seeder
         $usuario->ativo = 1;
 
         $usuario->save();
+
+        $perfil = new Perfil;
+        $perfil->prf_nome = 'user';
+        $perfil->save();
+
+        $usuario = new User;
+        $usuario->username = 'user';
+        $usuario->email = 'user@system.com';
+        $usuario->password = bcrypt('123456');
+        $usuario->prf_id = $perfil->prf_id;
+        $usuario->ativo = 1;
+
+        $usuario->save();
+
+
     }
 }
