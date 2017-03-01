@@ -50,7 +50,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2>{{Auth::user()->username}}</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -60,8 +60,19 @@
           </div>
         </div>
         @include('sidebar')
+        <!--content -->
+        <div class="right_col" role="main">
+            @yield('content')
+        </div>
+        <!--/content -->
 
-        @include('content')
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        
       </div>
     </div>
     @yield('scripts')

@@ -1,7 +1,3 @@
-@extends('sidebar')
-@section('body')
-mdfdsnkjfnskjfnsjnk
-@endsection
 
 @yield('scripts')
 <!-- jQuery -->
